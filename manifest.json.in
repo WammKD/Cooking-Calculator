@@ -1,0 +1,15 @@
+{
+    "name": "cookingcalculator.jaft",
+    "description": "A cooking-measurement (volume and weight) converter QML app. for the Ubuntu Touch platform.",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Cooking Calculator",
+    "hooks": {
+        "CookingCalculator": {
+            "apparmor": "CookingCalculator.apparmor",
+            "desktop":  "CookingCalculator.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Wamm K. D. <jaft.r@outlook.com>",
+    "framework" : "ubuntu-sdk-15.04.5"
+}
