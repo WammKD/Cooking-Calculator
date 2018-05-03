@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cookingcalculator.jaft\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-03 01:58+0000\n"
+"POT-Creation-Date: 2018-05-03 03:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,174 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/build/tmp/Main.qml:20 ../qml/Main.qml:388
+#: ../qml/build/tmp/Main.qml:20 ../qml/Main.qml:387
 #: CookingCalculator.desktop.in.h:1
 msgid "Cooking Calculator"
 msgstr ""
 
-#: ../qml/build/tmp/Main.qml:25 ../qml/Main.qml:393
+#: ../qml/build/tmp/Main.qml:25
 msgid "Hello World!"
+msgstr ""
+
+#: ../qml/Main.qml:391
+msgid "Products"
+msgstr ""
+
+#: ../qml/Main.qml:395
+msgid "Temperatures"
+msgstr ""
+
+#: ../qml/Main.qml:399
+msgid "Substitutions"
+msgstr ""
+
+#: ../qml/Main.qml:446
+msgid "About"
+msgstr ""
+
+#: ../qml/Main.qml:456
+msgid ""
+"Author:\n"
+"Contact: \n"
+"Source:\n"
+"Version: \n"
+"Year:"
+msgstr ""
+
+#: ../qml/Main.qml:543
+msgid "    View Fractions"
+msgstr ""
+
+#: ../qml/Main.qml:558
+msgid ""
+"\n"
+"\n"
+"Volume"
+msgstr ""
+
+#: ../qml/Main.qml:602
+msgid "Weight"
+msgstr ""
+
+#: ../qml/Main.qml:671
+msgid "Acids"
+msgstr ""
+
+#: ../qml/Main.qml:750
+msgid "Alcohol"
+msgstr ""
+
+#: ../qml/Main.qml:913
+msgid "Baking Powders"
+msgstr ""
+
+#: ../qml/Main.qml:1052
+msgid "Broth"
+msgstr ""
+
+#: ../qml/Main.qml:1148
+msgid "Cheese"
+msgstr ""
+
+#: ../qml/Main.qml:1406
+msgid "Chocolate"
+msgstr ""
+
+#: ../qml/Main.qml:1584
+msgid "Citrus"
+msgstr ""
+
+#: ../qml/Main.qml:1950
+msgid "Condiments"
+msgstr ""
+
+#: ../qml/Main.qml:2198
+msgid "Creams"
+msgstr ""
+
+#: ../qml/Main.qml:2600
+msgid "Eggs"
+msgstr ""
+
+#: ../qml/Main.qml:2808
+msgid "Fish"
+msgstr ""
+
+#: ../qml/Main.qml:2846
+msgid "Flour"
+msgstr ""
+
+#: ../qml/Main.qml:2942
+msgid "Milk"
+msgstr ""
+
+#: ../qml/Main.qml:3166
+msgid "Nuts"
+msgstr ""
+
+#: ../qml/Main.qml:3259
+msgid "Oils/Fats"
+msgstr ""
+
+#: ../qml/Main.qml:3644
+msgid "Seasoning"
+msgstr ""
+
+#: ../qml/Main.qml:3946
+msgid "Sugar"
+msgstr ""
+
+#: ../qml/Main.qml:4040
+msgid "Yeast"
+msgstr ""
+
+#: ../qml/Main.qml:4111
+msgid "Yogurt"
+msgstr ""
+
+#: ../qml/Main.qml:4178
+msgid "Settings"
+msgstr ""
+
+#: ../qml/Main.qml:4208
+msgid "Change Thousands Separator"
+msgstr ""
+
+#: ../qml/Main.qml:4209
+msgid ""
+"Input the characters you would like for the mark of the thousands place."
+msgstr ""
+
+#: ../qml/Main.qml:4237
+msgid "Thousands separator:   "
+msgstr ""
+
+#: ../qml/Main.qml:4240 ../qml/Main.qml:4294 ../qml/Main.qml:4353
+msgid "Change"
+msgstr ""
+
+#: ../qml/Main.qml:4262
+msgid "Change Decimal Mark"
+msgstr ""
+
+#: ../qml/Main.qml:4263
+msgid "Input the characters you would like for the decimal mark."
+msgstr ""
+
+#: ../qml/Main.qml:4291
+msgid "Decimal mark:   "
+msgstr ""
+
+#: ../qml/Main.qml:4316
+msgid "Change Decimal Places Amount"
+msgstr ""
+
+#: ../qml/Main.qml:4317
+msgid ""
+"Input the number of decimal places you'd like conversions to be calculated "
+"to (this will affect the size of the denominator of the fractions."
+msgstr ""
+
+#: ../qml/Main.qml:4350
+msgid "Number of decimal places:   "
 msgstr ""
