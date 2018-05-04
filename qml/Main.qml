@@ -6,7 +6,7 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 
 MainView {
-  id                   : root;
+  id                   : main_view;
   objectName           : 'mainView';
 
   // Note! applicationName needs to match the "name" field of click manifest
