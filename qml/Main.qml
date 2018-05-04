@@ -1,4 +1,4 @@
-import "fraction.min.js" as Fraction
+import "fraction.js" as Fraction
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import QtQuick.LocalStorage 2.0
