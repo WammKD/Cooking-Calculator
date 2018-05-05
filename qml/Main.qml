@@ -489,65 +489,11 @@ MainView {
         right  : parent.right;
       }
 
-      OptionSelector {
-        id                    : s_p
-        objectName            : "selector_product";
-        width                 : parent.width;
-        containerHeight       : itemHeight * 4;
-        model                 : [];
-        onSelectedIndexChanged: {
-          if(allow_convert) {
-            convert(false);
-          }
-        }
-      }
-
-      OptionSelector {
-        id                    : s_m;  // because it's long, otherwise
-        objectName            : "selector_measurement";
-        width                 : parent.width;
-        containerHeight       : itemHeight * 4;
-        model                 : [];
-        onSelectedIndexChanged: {
-          if(allow_convert) {
-            convert(false);
-          }
-        }
-      }
-
-      TextField {
-        id              : input;
-        objectName      : "input";
-        errorHighlight  : false;
-        validator       : DoubleValidator {
-                            notation: DoubleValidator.StandardNotation;
-                          }
-        height          : units.gu(5);
-        width           : parent.width;
-        font.pixelSize  : FontUtils.sizeToPixels("medium");
-        inputMethodHints: Qt.ImhFormattedNumbersOnly;
-        text            : '0.0';
-        onTextChanged   : convert(false);
-      }
-
-      Row {
-        id: switch_row;
-
-        Switch {
-          id       : view_fracts;
-          checked  : (getDbValue("fracts") == 1 ? true : false);
-          onClicked: updateBasedOnSwitch();
-        }
-
-        Label {
-          text: i18n.tr("    View Fractions");
-        }
-      }
-
       ScrollView {
-        height: main_view.height - (main_header.height + sects.height +
-                                    s_p.height + s_m.height + input.height +
-                                    switch_row.height);
+        id    : damner;
+        height: main_view.height - (main_header.height + (sects.height * 2) +
+                                    s_p.height         + s_m.height         +
+                                    input.height       + switch_row.height);
         width : parent.width;
 
         Column {
@@ -555,7 +501,7 @@ MainView {
           spacing: units.gu(1);
 
           Label {
-            text                    : i18n.tr("\n\nVolume");
+            text                    : i18n.tr("Volume");
             color                   : UbuntuColors.purple;
             font.bold               : true;
             /* fontSize                : "large"; */
@@ -641,6 +587,62 @@ MainView {
               lineHeightMode: Text.FixedHeight;
             }
           }
+        }
+      }
+
+      OptionSelector {
+        id                    : s_p
+        objectName            : "selector_product";
+        width                 : parent.width;
+        containerHeight       : itemHeight * 4;
+        model                 : [];
+        onSelectedIndexChanged: {
+          if(allow_convert) {
+            convert(false);
+          }
+        }
+      }
+
+      OptionSelector {
+        id                    : s_m;  // because it's long, otherwise
+        objectName            : "selector_measurement";
+        width                 : parent.width;
+        containerHeight       : itemHeight * 4;
+        model                 : [];
+        onSelectedIndexChanged: {
+          if(allow_convert) {
+            convert(false);
+          }
+        }
+      }
+
+      TextField {
+        id              : input;
+        objectName      : "input";
+        errorHighlight  : false;
+        validator       : DoubleValidator {
+                            notation: DoubleValidator.StandardNotation;
+                          }
+        height          : units.gu(5);
+        width           : parent.width;
+        font.pixelSize  : FontUtils.sizeToPixels("medium");
+        inputMethodHints: Qt.ImhFormattedNumbersOnly;
+        text            : '0.0';
+        onTextChanged   : convert(false);
+        onFocusChanged  : shit();
+      }
+
+      Row {
+        id: switch_row;
+
+        Switch {
+          id       : view_fracts;
+          checked  : (getDbValue("fracts") == 1 ? true : false);
+          onClicked: updateBasedOnSwitch();
+        }
+
+        Label {
+          text: i18n.tr("    View Fractions");
         }
       }
     }
