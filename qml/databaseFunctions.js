@@ -35,11 +35,11 @@ function openDB() {
   }
 }
 
-function getDbValue(col) {
+function getDbValue(col, dB) {
   var r = "";
 
   try {
-    db.transaction(function(tx) {
+    dB.transaction(function(tx) {
                      r = tx.executeSql("SELECT * "      +
                                        "FROM settings;").rows.item(0)[col];
                    });
