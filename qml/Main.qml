@@ -7,29 +7,31 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 
 MainView {
-  id                             : main_view;
-  objectName                     : 'mainView';
+  id                              : main_view;
+  objectName                      : 'mainView';
 
   // Note! applicationName needs to match the "name" field of click manifest
-  applicationName                : 'cookingcalculator.jaft';
+  applicationName                 : 'cookingcalculator.jaft';
 
   /*
    *  This property enables the application to change orientation
    *  when the device is rotated. The default is false.
    */
-  automaticOrientation           : true;
+  automaticOrientation            : true;
 
-  width                          : units.gu(100);
-  height                         : units.gu(75);
-  property real   margs          : units.gu(2);
+  width                           : units.gu(100);
+  height                          : units.gu(75);
+  property real   margs           : units.gu(2);
 
-  property var    temps          : DataConstants.temps;
-  property var    vols           : DataConstants.vols;
-  property var    foods          : DataConstants.foods;
-  property var    weights        : DataConstants.weights;
-  property var    current_table  : vols;
+  property var    temps           : DataConstants.temps;
+  property var    vols            : DataConstants.vols;
+  property var    foods           : DataConstants.foods;
+  property var    weights         : DataConstants.weights;
+  property var    current_table   : vols;
+  property var    db              : DatabaseFunctions.openDB();
+  property bool   settings_updated: false;
 
-  property var    fraction       : Fraction["Fraction"];
+  property var    fraction        : Fraction["Fraction"];
 
   PageHeader {
     id       : main_header;
