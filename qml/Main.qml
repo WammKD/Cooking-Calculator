@@ -308,16 +308,21 @@ MainView {
 
   function textAccumulation(t, f, o) {
     var weight = weights[s_m.model[s_m.selectedIndex]];
+    var result;
 
-    return (!(f == o) ? non_number :
-                        (weight ? f * weight /
-                                  foods[s_p.model[s_p.selectedIndex]] /
-                                  current_table[t] :
-                                  (current_table == temps ?
-                                   temps[s_m.model[s_m.selectedIndex]][t](f) :
-                                   f *
-                                   current_table[s_m.model[s_m.selectedIndex]]
-                                   / current_table[t])));
+    if(!(f == o)) {
+      result = non_number;
+    } else if(weight) {
+      result = f             *             weight  /
+               foods[s_p.model[s_p.selectedIndex]] /
+               current_table[t];
+    } else if(current_table == temps) {
+      result = temps[s_m.model[s_m.selectedIndex]][t](f);
+    } else {
+      result = f * current_table[s_m.model[s_m.selectedIndex]] / current_table[t];
+    }
+
+    return result;
   }
   function textAccumulation2(t, f, o) {
     return (!(f == o) ? non_number :
