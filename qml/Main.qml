@@ -38,15 +38,15 @@ MainView {
                  id     : sects;
                  actions: [Action {
                              text       : i18n.tr("Products");
-                             onTriggered: setupTabChange();
+                             onTriggered: console.log("PRODUCTS");
                            },
                            Action {
                              text       : i18n.tr("Temperatures");
-                             onTriggered: setupTabChange();
+                             onTriggered: console.log("TEMPERATURES");
                            },
                            Action {
                              text       : i18n.tr("Substitutions");
-                             onTriggered: setupTabChange();
+                             onTriggered: console.log("SUBSTITUTIONS");
                            }]
 
                  anchors {
