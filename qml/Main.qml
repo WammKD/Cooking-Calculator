@@ -56,9 +56,44 @@ MainView {
                  }
                }
 
+    trailingActionBar {
+      actions: [Action {
+                  iconName   : "settings";
+                  text       : "Settings";
+                  onTriggered: {
+                        main_header.visible = false;
+                    settings_header.visible = true;
+                  }
+                },
+                Action {
+                  iconName   : "info";
+                  text       : "About";
+                  onTriggered: PopupUtils.open(info_dialog);
+                }]
+    }
+
     Label {
       anchors.centerIn: parent;
       text            : i18n.tr('Hello World!');
     }
+  }
+
+  PageHeader {
+    id                      : settings_header;
+    title                   : i18n.tr("Settings");
+    visible                 : false;
+    leadingActionBar.actions: [Action {
+                                 iconName   : "back";
+                                 text       : "Back";
+                                 onTriggered: {
+                                   settings_header.visible = false;
+                                       main_header.visible = true;
+
+                                   if(settings_updated) {
+                                     settings_updated = false;
+                                     convert(false);
+                                   }
+                                 }
+                               }]
   }
 }
