@@ -17,10 +17,8 @@ function openDB() {
                                             'places INTEGER NOT NULL, ' +
                                             'fracts BOOLEAN NOT NULL);');
 
-                     var table = tx.executeSql("SELECT * "      +
-                                               "FROM settings;");
-
-                     if(table.rows.length == 0) {
+                     if(tx.executeSql("SELECT * "      +
+                                      "FROM settings;").rows.length == 0) {
                        tx.executeSql('INSERT INTO settings VALUES(?, ?, ' +
                                                                  '?, ?);',
                                      [",", ".", 2, 0]);
