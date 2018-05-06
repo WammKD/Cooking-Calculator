@@ -1,114 +1,42 @@
-import "fraction.js"      as Fraction
-import "dataConstants.js" as DataConstants
+import "fraction.js"          as Fraction
+import "dataConstants.js"     as DataConstants
+import "databaseFunctions.js" as DatabaseFunctions
 import QtQuick 2.4
 import QtQuick.LocalStorage 2.0
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 
 MainView {
-  id                   : main_view;
-  objectName           : 'mainView';
+  id                             : main_view;
+  objectName                     : 'mainView';
 
   // Note! applicationName needs to match the "name" field of click manifest
-  applicationName      : 'cookingcalculator.jaft';
+  applicationName                : 'cookingcalculator.jaft';
 
   /*
    *  This property enables the application to change orientation
    *  when the device is rotated. The default is false.
    */
-  automaticOrientation : true;
+  automaticOrientation           : true;
 
-  width                : units.gu(100);
-  height               : units.gu(75);
-  property real margs  : units.gu(2);
+  width                          : units.gu(100);
+  height                         : units.gu(75);
+  property real   margs          : units.gu(2);
 
-  property var  temps  : DataConstants.temps;
-  property var  vols   : DataConstants.vols;
-  property var  foods  : DataConstants.foods;
-  property var  weights: DataConstants.weights;
-
-
-  property var current_table   : vols;
-
-
-  function openDB() {
-    // var dB = LocalStorage.openDatabaseSync(identifier,
-                                           // version,
-                                           // description,
-                                           // estimated_size,
-                                           // callback(db));
-    var dB = LocalStorage.openDatabaseSync("cookingcalculator",
-                                           "1.0",
-                                           "Mass and weight converter.",
-                                           100000);
-
-    try {
-      dB.transaction(function(tx) {
-                       tx.executeSql('CREATE TABLE IF NOT EXISTS ' +
-                                     'settings(comma  TEXT    NOT NULL, ' +
-                                              'period TEXT    NOT NULL, ' +
-                                              'places INTEGER NOT NULL, ' +
-                                              'fracts BOOLEAN NOT NULL);');
-
-                       var table = tx.executeSql("SELECT * " +
-                                                 "FROM settings;");
-
-                       if(table.rows.length == 0) {
-                         tx.executeSql('INSERT INTO settings VALUES(?, ?, ' +
-                                                                   '?, ?);',
-                                       [",", ".", 2, 0]);
-
-                         print('Settings table seeded');
-                       }
-
-                       print('Settings table initialized.');
-                     });
-
-      return dB;
-    } catch(err) {
-      print("Error creating table in database: " + err);
-    }
-  }
-
-  function getDbValue(col) {
-    var r = null;
-
-    try {
-      db.transaction(function(tx) {
-                       r = tx.executeSql("SELECT * " +
-                                         "FROM settings;").rows.item(0)[col];
-                     });
-    } catch(err) {
-      print("Error retrieving value from database: " + err);
-    }
-
-    return r;
-  }
-
-  function updateDbValue(col, value) {
-    try {
-      db.transaction(function(tx) {  // There should only be one row, all times
-                       tx.executeSql('UPDATE settings ' +
-                                     'SET ' + col + '=?;', [value]);
-                     });
-    } catch(err) {
-      print("Error updating value in database.")
-      print('Command sent was: UPDATE settings SET ' + col + '=\'' + value +
-            '\';');
-      print(err);
-    }
-  }
-
-
-  property var    db             : openDB();
+  property var    temps          : DataConstants.temps;
+  property var    vols           : DataConstants.vols;
+  property var    foods          : DataConstants.foods;
+  property var    weights        : DataConstants.weights;
+  property var    current_table  : vols;
+  property var    db             : DatabaseFunctions.openDB();
   property bool   settings_change: false;
   property bool   allow_convert  : true;
   property real   sub_line_height: units.gu(2.5);
   property real   subs_spacing   : units.gu(1);
   property real   subs_spacing2  : units.gu(0);
-  property string comma          : getDbValue("comma");
-  property string period         : getDbValue("period");
-  property int    places         : getDbValue("places");
+  property string comma          : DatabaseFunctions.getDbValue("comma");
+  property string period         : DatabaseFunctions.getDbValue("period");
+  property int    places         : DatabaseFunctions.getDbValue("places");
   property string non_number     : "N/A";
   property string equals_spaces  : "\u00A0\u00A0";
   property string   vols_label   : Object.keys(vols   ).join("\n");
@@ -126,7 +54,7 @@ MainView {
   property var    fraction       : Fraction["Fraction"];
 
   function updateBasedOnSwitch() {
-    updateDbValue("fracts", (view_fracts.checked ? 1 : 0));
+    DatabaseFunctions.updateDbValue("fracts", (view_fracts.checked ? 1 : 0));
     whole_numbers.text = (view_fracts.checked ? values_wholes : "");
     fract_dec.text     = (view_fracts.checked ? values_fracts : values_decs);
     weight_w_nums.text = (view_fracts.checked ? weight_wholes : "");
@@ -504,7 +432,8 @@ MainView {
 
         Switch {
           id       : view_fracts;
-          checked  : (getDbValue("fracts") == 1 ? true : false);
+          checked  : (DatabaseFunctions.getDbValue("fracts") == 1 ? true  :
+                                                                    false);
           onClicked: updateBasedOnSwitch();
         }
 
@@ -4093,7 +4022,7 @@ MainView {
               text     : "Save";
               color    : UbuntuColors.green;
               onClicked: {
-                updateDbValue("comma", thous_text.text);
+                DatabaseFunctions.updateDbValue("comma", thous_text.text);
                 comma = thous_text.text;
                 PopupUtils.close(thous_dialogue);
                 settings_change = true;
@@ -4147,7 +4076,7 @@ MainView {
               text     : "Save"
               color    : UbuntuColors.green
               onClicked: {
-                updateDbValue("period", dec_text.text);
+                DatabaseFunctions.updateDbValue("period", dec_text.text);
                 period = dec_text.text;
                 PopupUtils.close(dec_dialogue);
                 settings_change = true;
@@ -4206,7 +4135,7 @@ MainView {
               text     : "Save"
               color    : UbuntuColors.green
               onClicked: {
-                updateDbValue("places", place_text.text);
+                DatabaseFunctions.updateDbValue("places", place_text.text);
                 places = place_text.text;
                 PopupUtils.close(place_dialogue);
                 settings_change = true;
