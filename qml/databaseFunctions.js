@@ -36,11 +36,11 @@ function openDB() {
 }
 
 function getDbValue(col) {
-  var r = null;
+  var r = "";
 
   try {
     db.transaction(function(tx) {
-                     r = tx.executeSql("SELECT * " +
+                     r = tx.executeSql("SELECT * "      +
                                        "FROM settings;").rows.item(0)[col];
                    });
   } catch(err) {
