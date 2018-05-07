@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cookingcalculator.jaft\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-06 22:45+0000\n"
+"POT-Creation-Date: 2018-05-07 03:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,24 +17,24 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/build/tmp/Main.qml:387 ../qml/Main.qml:36
+#: ../qml/build/tmp/Main.qml:387 ../qml/Main.qml:63
 #: CookingCalculator.desktop.in.h:1
 msgid "Cooking Calculator"
 msgstr ""
 
-#: ../qml/build/tmp/Main.qml:391 ../qml/Main.qml:40
+#: ../qml/build/tmp/Main.qml:391 ../qml/Main.qml:67
 msgid "Products"
 msgstr ""
 
-#: ../qml/build/tmp/Main.qml:395 ../qml/Main.qml:44
+#: ../qml/build/tmp/Main.qml:395 ../qml/Main.qml:71
 msgid "Temperatures"
 msgstr ""
 
-#: ../qml/build/tmp/Main.qml:399 ../qml/Main.qml:48
+#: ../qml/build/tmp/Main.qml:399 ../qml/Main.qml:75
 msgid "Substitutions"
 msgstr ""
 
-#: ../qml/build/tmp/Main.qml:446
+#: ../qml/build/tmp/Main.qml:446 ../qml/Main.qml:127
 msgid "About"
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Yogurt"
 msgstr ""
 
-#: ../qml/build/tmp/Main.qml:4180 ../qml/Main.qml:83
+#: ../qml/build/tmp/Main.qml:4180 ../qml/Main.qml:41
 msgid "Settings"
 msgstr ""
 
@@ -183,6 +183,28 @@ msgstr ""
 msgid "Number of decimal places:   "
 msgstr ""
 
-#: ../qml/Main.qml:77
+#: ../qml/Main.qml:135
+msgid ""
+"\n"
+"Author:"
+msgstr ""
+
+#: ../qml/Main.qml:156
+msgid "Contact:  "
+msgstr ""
+
+#: ../qml/Main.qml:176
+msgid "Source:"
+msgstr ""
+
+#: ../qml/Main.qml:196
+msgid "Version:"
+msgstr ""
+
+#: ../qml/Main.qml:216
+msgid "Year:"
+msgstr ""
+
+#: ../qml/Main.qml:239
 msgid "Hello World!"
 msgstr ""

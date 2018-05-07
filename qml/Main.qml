@@ -99,28 +99,143 @@ MainView {
                 }]
     }
 
+    Component {
+      id: info_dialog;
+
+      Popover {
+        contentWidth : {  // GitHub URL length
+          var  ideal_width = 824.1875 + contact_label.width + margs * 2;
+          var device_width =                   parent.width - margs * 2;
+
+          return ideal_width > device_width ? device_width : ideal_width;
+        }
+        contentHeight: info_dialogue.height + margs * 2;
+
+        Column {
+          id: info_dialogue;
+
+          anchors {
+            margins: margs;
+            left   : parent.left;
+            top    : parent.top;
+            right  : parent.right;
+          }
+
+          Label {
+            id                      : info_title;
+            text                    : i18n.tr("About");
+            color                   : UbuntuColors.slate;
+            fontSize                : "x-large";
+            anchors.horizontalCenter: parent.horizontalCenter;
+          }
+
+          Row {
+            Label {
+              text          : i18n.tr("\nAuthor:");
+              color         : UbuntuColors.slate;
+              width         : contact_label.width;
+              lineHeight    : units.gu(2.5);
+              lineHeightMode: Text.FixedHeight;
+            }
+
+            Label {
+              text          : "\nJonathan Schmeling";
+              color         : UbuntuColors.inkstone;
+              width         : parent.parent.width - contact_label.width;
+              font.bold     : true;
+              lineHeight    : units.gu(2.5);
+              lineHeightMode: Text.FixedHeight;
+              wrapMode      : Text.Wrap;
+            }
+          }
+
+          Row {
+            Label {
+              id            : contact_label;
+              text          : i18n.tr("Contact:  ");
+              color         : UbuntuColors.slate;
+              lineHeight    : units.gu(2.5);
+              lineHeightMode: Text.FixedHeight;
+            }
+
+            Label {
+              id            : email_label;
+              text          : "jaft.r@outlook.com";
+              color         : UbuntuColors.inkstone;
+              width         : parent.parent.width - contact_label.width;
+              font.bold     : true;
+              lineHeight    : units.gu(2.5);
+              lineHeightMode: Text.FixedHeight;
+              wrapMode      : Text.Wrap;
+            }
+          }
+
+          Row {
+            Label {
+              text          : i18n.tr("Source:");
+              color         : UbuntuColors.slate;
+              width         : contact_label.width;
+              lineHeight    : units.gu(2.5);
+              lineHeightMode: Text.FixedHeight;
+            }
+
+            Label {
+              text          : "https://github.com/WammKD/Cooking-Calc";
+              color         : UbuntuColors.inkstone;
+              width         : parent.parent.width - contact_label.width;
+              font.bold     : true;
+              lineHeight    : units.gu(2.5);
+              lineHeightMode: Text.FixedHeight;
+              wrapMode      : Text.Wrap;
+            }
+          }
+
+          Row {
+            Label {
+              text          : i18n.tr("Version:");
+              color         : UbuntuColors.slate;
+              width         : contact_label.width;
+              lineHeight    : units.gu(2.5);
+              lineHeightMode: Text.FixedHeight;
+            }
+
+            Label {
+              text          : "1.0.0";
+              color         : UbuntuColors.inkstone;
+              width         : parent.parent.width - contact_label.width;
+              font.bold     : true;
+              lineHeight    : units.gu(2.5);
+              lineHeightMode: Text.FixedHeight;
+              wrapMode      : Text.Wrap;
+            }
+          }
+
+          Row {
+            Label {
+              text          : i18n.tr("Year:");
+              color         : UbuntuColors.slate;
+              width         : contact_label.width;
+              lineHeight    : units.gu(2.5);
+              lineHeightMode: Text.FixedHeight;
+            }
+
+            Label {
+              text          : "2018";
+              color         : UbuntuColors.inkstone;
+              width         : parent.parent.width - contact_label.width;
+              font.bold     : true;
+              lineHeight    : units.gu(2.5);
+              lineHeightMode: Text.FixedHeight;
+              wrapMode      : Text.Wrap;
+            }
+          }
+        }
+      }
+    }
+
     Label {
       anchors.centerIn: parent;
       text            : i18n.tr('Hello World!');
     }
-  }
-
-  PageHeader {
-    id                      : settings_header;
-    title                   : i18n.tr("Settings");
-    visible                 : false;
-    leadingActionBar.actions: [Action {
-                                 iconName   : "back";
-                                 text       : "Back";
-                                 onTriggered: {
-                                   settings_header.visible = false;
-                                       main_header.visible = true;
-
-                                   if(settings_updated) {
-                                     settings_updated = false;
-                                     convert(false);
-                                   }
-                                 }
-                               }]
   }
 }
