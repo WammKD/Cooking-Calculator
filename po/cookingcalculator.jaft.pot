@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cookingcalculator.jaft\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 04:18+0000\n"
+"POT-Creation-Date: 2018-05-07 04:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Substitutions"
 msgstr ""
 
-#: ../qml/build/tmp/Main.qml:446 ../qml/Main.qml:126
+#: ../qml/build/tmp/Main.qml:446 ../qml/Main.qml:131
 msgid "About"
 msgstr ""
 
@@ -183,6 +183,6 @@ msgstr ""
 msgid "Number of decimal places:   "
 msgstr ""
 
-#: ../qml/Main.qml:168
+#: ../qml/Main.qml:173
 msgid "Hello World!"
 msgstr ""

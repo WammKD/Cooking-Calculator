@@ -109,7 +109,12 @@ MainView {
 
           return ideal_width > device_width ? device_width : ideal_width;
         }
-        contentHeight: info_dialogue.height + margs * 2;
+        contentHeight: {
+          var  ideal_width = info_dialogue.height + margs * 2;
+          var device_width =        parent.height - margs * 2;
+
+          return ideal_width > device_width ? device_width : ideal_width;
+        }
 
         Column {
           id: info_dialogue;
