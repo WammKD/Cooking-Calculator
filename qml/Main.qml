@@ -104,8 +104,8 @@ MainView {
 
       Popover {
         contentWidth : {  // GitHub URL length
-          var  ideal_width = 824.1875 + contact_label.width + margs * 2;
-          var device_width =                   parent.width - margs * 2;
+          var  ideal_width = 824.1875 + contact_row.children[0].width + margs * 2;
+          var device_width =                             parent.width - margs * 2;
 
           return ideal_width > device_width ? device_width : ideal_width;
         }
@@ -130,42 +130,32 @@ MainView {
           }
 
           AboutRow {
+            property bool   set_width: true;
             property string row_key  : "\nAuthor:";
             property string row_value: "\nJonathan Schmeling";
           }
 
-          Row {
-            Label {
-              id            : contact_label;
-              text          : i18n.tr("Contact:  ");
-              color         : UbuntuColors.slate;
-              lineHeight    : units.gu(2.5);
-              lineHeightMode: Text.FixedHeight;
-            }
-
-            Label {
-              id            : email_label;
-              text          : "jaft.r@outlook.com";
-              color         : UbuntuColors.inkstone;
-              width         : parent.parent.width - contact_label.width;
-              font.bold     : true;
-              lineHeight    : units.gu(2.5);
-              lineHeightMode: Text.FixedHeight;
-              wrapMode      : Text.Wrap;
-            }
+          AboutRow {
+            id                       : contact_row;
+            property bool   set_width: false;
+            property string row_key  : "Contact:  ";
+            property string row_value: "jaft.r@outlook.com";
           }
 
           AboutRow {
+            property bool   set_width: true;
             property string row_key  : "Source:";
             property string row_value: "https://github.com/WammKD/Cooking-Calc";
           }
 
           AboutRow {
+            property bool   set_width: true;
             property string row_key  : "Version:";
             property string row_value: "1.0.0";
           }
 
           AboutRow {
+            property bool   set_width: true;
             property string row_key  : "Year:";
             property string row_value: "2018";
           }
