@@ -33,6 +33,31 @@ MainView {
 
   property var    fraction        : Fraction["Fraction"];
 
+  /*
+   *  Settings
+   */
+  PageHeader {
+    id                      : settings_header;
+    title                   : i18n.tr("Settings");
+    visible                 : false;
+    leadingActionBar.actions: [Action {
+                                 iconName   : "back";
+                                 text       : "Back";
+                                 onTriggered: {
+                                   settings_header.visible = false;
+                                       main_header.visible = true;
+
+                                   if(settings_updated) {
+                                     settings_updated = false;
+                                     convert(false);
+                                   }
+                                 }
+                               }]
+  }
+
+  /*
+   *  Main
+   */
   PageHeader {
     id       : main_header;
     title    : i18n.tr("Cooking Calculator");
