@@ -129,24 +129,9 @@ MainView {
             anchors.horizontalCenter: parent.horizontalCenter;
           }
 
-          Row {
-            Label {
-              text          : i18n.tr("\nAuthor:");
-              color         : UbuntuColors.slate;
-              width         : contact_label.width;
-              lineHeight    : units.gu(2.5);
-              lineHeightMode: Text.FixedHeight;
-            }
-
-            Label {
-              text          : "\nJonathan Schmeling";
-              color         : UbuntuColors.inkstone;
-              width         : parent.parent.width - contact_label.width;
-              font.bold     : true;
-              lineHeight    : units.gu(2.5);
-              lineHeightMode: Text.FixedHeight;
-              wrapMode      : Text.Wrap;
-            }
+          AboutRow {
+            property string row_key  : "\nAuthor:";
+            property string row_value: "\nJonathan Schmeling";
           }
 
           Row {
@@ -170,64 +155,19 @@ MainView {
             }
           }
 
-          Row {
-            Label {
-              text          : i18n.tr("Source:");
-              color         : UbuntuColors.slate;
-              width         : contact_label.width;
-              lineHeight    : units.gu(2.5);
-              lineHeightMode: Text.FixedHeight;
-            }
-
-            Label {
-              text          : "https://github.com/WammKD/Cooking-Calc";
-              color         : UbuntuColors.inkstone;
-              width         : parent.parent.width - contact_label.width;
-              font.bold     : true;
-              lineHeight    : units.gu(2.5);
-              lineHeightMode: Text.FixedHeight;
-              wrapMode      : Text.Wrap;
-            }
+          AboutRow {
+            property string row_key  : "Source:";
+            property string row_value: "https://github.com/WammKD/Cooking-Calc";
           }
 
-          Row {
-            Label {
-              text          : i18n.tr("Version:");
-              color         : UbuntuColors.slate;
-              width         : contact_label.width;
-              lineHeight    : units.gu(2.5);
-              lineHeightMode: Text.FixedHeight;
-            }
-
-            Label {
-              text          : "1.0.0";
-              color         : UbuntuColors.inkstone;
-              width         : parent.parent.width - contact_label.width;
-              font.bold     : true;
-              lineHeight    : units.gu(2.5);
-              lineHeightMode: Text.FixedHeight;
-              wrapMode      : Text.Wrap;
-            }
+          AboutRow {
+            property string row_key  : "Version:";
+            property string row_value: "1.0.0";
           }
 
-          Row {
-            Label {
-              text          : i18n.tr("Year:");
-              color         : UbuntuColors.slate;
-              width         : contact_label.width;
-              lineHeight    : units.gu(2.5);
-              lineHeightMode: Text.FixedHeight;
-            }
-
-            Label {
-              text          : "2018";
-              color         : UbuntuColors.inkstone;
-              width         : parent.parent.width - contact_label.width;
-              font.bold     : true;
-              lineHeight    : units.gu(2.5);
-              lineHeightMode: Text.FixedHeight;
-              wrapMode      : Text.Wrap;
-            }
+          AboutRow {
+            property string row_key  : "Year:";
+            property string row_value: "2018";
           }
         }
       }
