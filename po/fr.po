@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cookingcalculator.jaft\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-06 19:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/build/tmp/Main.qml:387 ../qml/Main.qml:182
+#: CookingCalculator.desktop.in.h:1
+msgid "Cooking Calculator"
+msgstr "Calculatrice de cuisine"
+
+#: ../qml/build/tmp/Main.qml:391 ../qml/Main.qml:186
+msgid "Products"
+msgstr "Produits"
+
+#: ../qml/build/tmp/Main.qml:395 ../qml/Main.qml:190
+msgid "Temperatures"
+msgstr "Températures"
+
+#: ../qml/build/tmp/Main.qml:399 ../qml/Main.qml:194
+msgid "Substitutions"
+msgstr "Substitutions"
+
+#: ../qml/build/tmp/Main.qml:446 ../qml/Main.qml:241
+msgid "About"
+msgstr "À propos"
+
+#: ../qml/build/tmp/Main.qml:456 ../qml/Main.qml:251
+msgid ""
+"Author:\n"
+"Contact: \n"
+"Source:\n"
+"Version: \n"
+"Year:"
+msgstr ""
+"Auteur :\n"
+"Contact : \n"
+"Source :\n"
+"Version : \n"
+"Année :"
+
+#: ../qml/build/tmp/Main.qml:504 ../qml/Main.qml:299
+msgid "Volume"
+msgstr "Volume"
+
+#: ../qml/build/tmp/Main.qml:548 ../qml/Main.qml:343
+msgid "Weight"
+msgstr "Poids"
+
+#: ../qml/build/tmp/Main.qml:645 ../qml/Main.qml:441
+msgid "    View Fractions"
+msgstr "    Afficher les proportions"
+
+#: ../qml/build/tmp/Main.qml:673 ../qml/Main.qml:469
+msgid "Acids"
+msgstr "Acides"
+
+#: ../qml/build/tmp/Main.qml:752 ../qml/Main.qml:548
+msgid "Alcohol"
+msgstr "Alcool"
+
+#: ../qml/build/tmp/Main.qml:915 ../qml/Main.qml:711
+msgid "Baking Powders"
+msgstr "Poudres à lever"
+
+#: ../qml/build/tmp/Main.qml:1054 ../qml/Main.qml:850
+msgid "Broth"
+msgstr "Bouillon"
+
+#: ../qml/build/tmp/Main.qml:1150 ../qml/Main.qml:946
+msgid "Cheese"
+msgstr "Fromage"
+
+#: ../qml/build/tmp/Main.qml:1408 ../qml/Main.qml:1204
+msgid "Chocolate"
+msgstr "Chocolat"
+
+#: ../qml/build/tmp/Main.qml:1586 ../qml/Main.qml:1382
+msgid "Citrus"
+msgstr "Agrume"
+
+#: ../qml/build/tmp/Main.qml:1952 ../qml/Main.qml:1748
+msgid "Condiments"
+msgstr "Condiments"
+
+#: ../qml/build/tmp/Main.qml:2200 ../qml/Main.qml:1996
+msgid "Creams"
+msgstr "Crèmes"
+
+#: ../qml/build/tmp/Main.qml:2602 ../qml/Main.qml:2398
+msgid "Eggs"
+msgstr "Œufs"
+
+#: ../qml/build/tmp/Main.qml:2810 ../qml/Main.qml:2606
+msgid "Fish"
+msgstr "Poisson"
+
+#: ../qml/build/tmp/Main.qml:2848 ../qml/Main.qml:2644
+msgid "Flour"
+msgstr "Farine"
+
+#: ../qml/build/tmp/Main.qml:2944 ../qml/Main.qml:2740
+msgid "Milk"
+msgstr "Lait"
+
+#: ../qml/build/tmp/Main.qml:3168 ../qml/Main.qml:2964
+msgid "Nuts"
+msgstr "Noix"
+
+#: ../qml/build/tmp/Main.qml:3261 ../qml/Main.qml:3057
+msgid "Oils/Fats"
+msgstr "Huiles/Graisses"
+
+#: ../qml/build/tmp/Main.qml:3646 ../qml/Main.qml:3442
+msgid "Seasoning"
+msgstr "Assaisonnement"
+
+#: ../qml/build/tmp/Main.qml:3948 ../qml/Main.qml:3744
+msgid "Sugar"
+msgstr "Sucre"
+
+#: ../qml/build/tmp/Main.qml:4042 ../qml/Main.qml:3838
+msgid "Yeast"
+msgstr "Levure"
+
+#: ../qml/build/tmp/Main.qml:4113 ../qml/Main.qml:3909
+msgid "Yogurt"
+msgstr "Yaourt"
+
+#: ../qml/build/tmp/Main.qml:4180 ../qml/Main.qml:3976
+msgid "Settings"
+msgstr "Paramètres"
+
+#: ../qml/build/tmp/Main.qml:4210 ../qml/Main.qml:4006
+msgid "Change Thousands Separator"
+msgstr "Modifier le séparateur de milliers"
+
+#: ../qml/build/tmp/Main.qml:4211 ../qml/Main.qml:4007
+msgid ""
+"Input the characters you would like for the mark of the thousands place."
+msgstr ""
+"Saisissez les caractères que vous voudriez avoir comme séparateur de milliers."
+
+#: ../qml/build/tmp/Main.qml:4239 ../qml/Main.qml:4035
+msgid "Thousands separator:   "
+msgstr "Séparateur de milliers :   "
+
+#: ../qml/build/tmp/Main.qml:4242 ../qml/build/tmp/Main.qml:4296
+#: ../qml/build/tmp/Main.qml:4355 ../qml/Main.qml:4038 ../qml/Main.qml:4092
+#: ../qml/Main.qml:4151
+msgid "Change"
+msgstr "Modifier"
+
+#: ../qml/build/tmp/Main.qml:4264 ../qml/Main.qml:4060
+msgid "Change Decimal Mark"
+msgstr "Modifier le signe des décimales"
+
+#: ../qml/build/tmp/Main.qml:4265 ../qml/Main.qml:4061
+msgid "Input the characters you would like for the decimal mark."
+msgstr "Saisissez les caractères que vous voudriez avoir comme séparateur de décimales"
+
+#: ../qml/build/tmp/Main.qml:4293 ../qml/Main.qml:4089
+msgid "Decimal mark:   "
+msgstr "Séparateurs de décimales :   "
+
+#: ../qml/build/tmp/Main.qml:4318 ../qml/Main.qml:4114
+msgid "Change Decimal Places Amount"
+msgstr "Modifier le nombre de décimales"
+
+#: ../qml/build/tmp/Main.qml:4319 ../qml/Main.qml:4115
+msgid ""
+"Input the number of decimal places you'd like conversions to be calculated "
+"to (this will affect the size of the denominator of the fractions."
+msgstr ""
+"Saisissez le nombre de décimales que vous voudriez avoir en résultat de "
+"conversions (cela affectera la taille du dénominateur des fractions."
+
+#: ../qml/build/tmp/Main.qml:4352 ../qml/Main.qml:4148
+msgid "Number of decimal places:   "
+msgstr "Nombre de décimales :   "
