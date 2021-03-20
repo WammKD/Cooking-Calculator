@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cookingcalculator.jaft\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-08 23:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: JanConGitHub <janc@sherdahl.no>\n"
+"Language-Team: NORWEGIAN <LL@li.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/Main.qml:182 CookingCalculator.desktop.in.h:1
+msgid "Cooking Calculator"
+msgstr "Matlagingskalkulator"
+
+#: ../qml/Main.qml:186
+msgid "Products"
+msgstr "Produkter"
+
+#: ../qml/Main.qml:190
+msgid "Temperatures"
+msgstr "Temperaturer"
+
+#: ../qml/Main.qml:194
+msgid "Substitutions"
+msgstr "Erstatninger"
+
+#: ../qml/Main.qml:241
+msgid "About"
+msgstr "Om"
+
+#: ../qml/Main.qml:251
+msgid ""
+"Author:\n"
+"Contact: \n"
+"Source:\n"
+"Version: \n"
+"Year:"
+msgstr ""
+"Forfatter:\n"
+"Kontakt: \n"
+"Kilde:\n"
+"Versjon: \n"
+"År:"
+
+#: ../qml/Main.qml:299
+msgid "Volume"
+msgstr "Volum"
+
+#: ../qml/Main.qml:343
+msgid "Weight"
+msgstr "Vekt"
+
+#: ../qml/Main.qml:441
+msgid "    View Fractions"
+msgstr "    Vis brøker"
+
+#: ../qml/Main.qml:469
+msgid "Acids"
+msgstr "Syrer"
+
+#: ../qml/Main.qml:548
+msgid "Alcohol"
+msgstr "Alkohold"
+
+#: ../qml/Main.qml:711
+msgid "Baking Powders"
+msgstr "Bakepulver"
+
+#: ../qml/Main.qml:850
+msgid "Broth"
+msgstr "Buljong"
+
+#: ../qml/Main.qml:946
+msgid "Cheese"
+msgstr "Ost"
+
+#: ../qml/Main.qml:1204
+msgid "Chocolate"
+msgstr "Sjokkolade"
+
+#: ../qml/Main.qml:1382
+msgid "Citrus"
+msgstr "Sitrus"
+
+#: ../qml/Main.qml:1748
+msgid "Condiments"
+msgstr "Krydder"
+
+#: ../qml/Main.qml:1996
+msgid "Creams"
+msgstr "Kremer"
+
+#: ../qml/Main.qml:2398
+msgid "Eggs"
+msgstr "Egg"
+
+#: ../qml/Main.qml:2606
+msgid "Fish"
+msgstr "Fisk"
+
+#: ../qml/Main.qml:2644
+msgid "Flour"
+msgstr "Mel"
+
+#: ../qml/Main.qml:2740
+msgid "Milk"
+msgstr "Melk"
+
+#: ../qml/Main.qml:2964
+msgid "Nuts"
+msgstr "Nøtter"
+
+#: ../qml/Main.qml:3057
+msgid "Oils/Fats"
+msgstr "Oljer/fett"
+
+#: ../qml/Main.qml:3442
+msgid "Seasoning"
+msgstr "Krydder"
+
+#: ../qml/Main.qml:3744
+msgid "Sugar"
+msgstr "Sukker"
+
+#: ../qml/Main.qml:3838
+msgid "Yeast"
+msgstr "Gjær"
+
+#: ../qml/Main.qml:3909
+msgid "Yogurt"
+msgstr "Yoghurt"
+
+#: ../qml/Main.qml:3976
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: ../qml/Main.qml:4006
+msgid "Change Thousands Separator"
+msgstr ""
+
+#: ../qml/Main.qml:4007checkup
+msgid ""
+"Input the characters you would like for the mark of the thousands place."
+msgstr ""
+
+#: ../qml/Main.qml:4035
+msgid "Thousands separator:   "
+msgstr "1000 separator:   "
+
+#: ../qml/Main.qml:4038 ../qml/Main.qml:4092 ../qml/Main.qml:4151
+msgid "Change"
+msgstr "Endre"
+
+#: ../qml/Main.qml:4060
+msgid "Change Decimal Mark"
+msgstr "Endre desimalmerke"
+
+#: ../qml/Main.qml:4061
+msgid "Input the characters you would like for the decimal mark."
+msgstr "Skriv inn tegnene du vil ha for desimaltegnet."
+
+#: ../qml/Main.qml:4089
+msgid "Decimal mark:   "
+msgstr "Desimaltegn:   "
+
+#: ../qml/Main.qml:4114
+msgid "Change Decimal Places Amount"
+msgstr "Endre antall desimaler"
+
+#: ../qml/Main.qml:4115
+msgid ""
+"Input the number of decimal places you'd like conversions to be calculated "
+"to (this will affect the size of the denominator of the fractions."
+msgstr ""
+"Skriv inn antall desimaler du vil at konverteringer skal beregnes"
+"til (dette vil påvirke størrelsen på nevneren til brøkene."
+
+#: ../qml/Main.qml:4148
+msgid "Number of decimal places:   "
+msgstr "Antall desimaler:   "
